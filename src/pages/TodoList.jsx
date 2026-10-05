@@ -7,7 +7,7 @@ function TodoList() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch("http://localhost:3000/todos")
+    fetch("https://react-test1-server.onrender.com/todos")
       .then((res) => res.json())
       .then((data) => setTodos(data));
   }, []);
@@ -17,7 +17,7 @@ function TodoList() {
   };
 
   const confirmDelete = () => {
-    fetch(`http://localhost:3000/todos/${deleteId}`, {
+    fetch(`https://react-test1-server.onrender.com/todos/${deleteId}`, {
       method: "DELETE"
     }).then(() => {
       setTodos(todos.filter((todo) => todo.id !== deleteId));

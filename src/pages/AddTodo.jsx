@@ -9,7 +9,7 @@ function AddTodo() {
   const addTodo = (e) => {
     e.preventDefault();
 
-    fetch("http://localhost:3000/todos", {
+    fetch("https://react-test1-server.onrender.com/todos", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
