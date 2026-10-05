@@ -1,19 +1,19 @@
 {
   "todos": [
     {
-      "id": "2",
-      "title": "Pay electricity",
-      "status": "Completed"
-    },
-    {
-      "title": "groceries shoppping",
-      "status": "Pending",
-      "id": "2pxlacS1q8M"
-    },
-    {
       "title": "Shopping",
       "status": "Completed",
       "id": "UniE7vVqKZs"
+    },
+    {
+      "title": "Cleaning",
+      "status": "Pending",
+      "id": "hSENRYG10XQ"
+    },
+    {
+      "title": "shopping",
+      "status": "Pending",
+      "id": "czxDSHsX04M"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

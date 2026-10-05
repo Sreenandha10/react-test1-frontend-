@@ -9,20 +9,18 @@ function AddTodo() {
   const addTodo = (e) => {
     e.preventDefault();
 
-    const newTodo = {
-      title: title,
-      status: status
-    };
-
     fetch("http://localhost:3000/todos", {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(newTodo)
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        title: title,
+        status: status
+      })
     })
       .then((res) => res.json())
-      .then(() => {
-        navigate("/todos");
-      });
+      .then(() => navigate("/todos"));
   };
 
   return (
@@ -32,21 +30,45 @@ function AddTodo() {
 
         <form onSubmit={addTodo}>
           <label className="block font-semibold mb-2">Todo Title</label>
-          <input type="text" placeholder="Enter todo title" value={title} onChange={(e) => setTitle(e.target.value)} className="w-full border p-2 rounded mb-4" required />
+
+          <input
+            type="text"
+            placeholder="Enter todo title"
+            value={title}
+            onChange={(e) => setTitle(e.target.value)}
+            className="w-full border p-2 rounded mb-4"
+            required
+          />
 
           <label className="block font-semibold mb-2">Status</label>
-          <select value={status} onChange={(e) => setStatus(e.target.value)} className="w-full border p-2 rounded mb-5">
+
+          <select
+            value={status}
+            onChange={(e) => setStatus(e.target.value)}
+            className="w-full border p-2 rounded mb-5"
+          >
             <option value="Pending">Pending</option>
             <option value="Completed">Completed</option>
           </select>
 
-          <button type="submit" className="w-full bg-blue-500 text-white p-2 rounded">Add Todo</button>
+          <button
+            type="submit"
+            className="w-full bg-blue-500 text-white p-2 rounded"
+          >
+            Add Todo
+          </button>
         </form>
 
-        <Link to="/todos" className="block text-center mt-4 text-blue-500">← Back to Todo List</Link>
+        <Link
+          to="/todos"
+          className="block text-center mt-4 text-blue-500"
+        >
+          ← Back to Todo List
+        </Link>
       </div>
     </div>
   );
 }
 
 export default AddTodo;
+
