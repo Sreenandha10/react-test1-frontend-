@@ -1,19 +1,29 @@
 {
   "todos": [
     {
-      "title": "Shopping",
-      "status": "Completed",
-      "id": "UniE7vVqKZs"
-    },
-    {
-      "title": "Cleaning",
-      "status": "Pending",
-      "id": "hSENRYG10XQ"
-    },
-    {
       "title": "shopping",
       "status": "Pending",
       "id": "czxDSHsX04M"
+    },
+    {
+      "title": "Studying",
+      "status": "Completed",
+      "id": "WAVy5tASRqc"
+    },
+    {
+      "title": "Homework",
+      "status": "Pending",
+      "id": "pwcex_6A0d4"
+    },
+    {
+      "title": "Buy Groceries",
+      "status": "Pending",
+      "id": "PTAQ1vQ9FRs"
+    },
+    {
+      "title": "Pay electricity bill",
+      "status": "Completed",
+      "id": "oYE5ujqyZeM"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
